@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringDemo", "StringDemo\StringDemo.csproj", "{EE65859E-B793-4AB8-B814-13A29BBCAFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequiredDemo", "RequiredDemo\RequiredDemo.csproj", "{979650EE-ACEA-4253-B750-8DC559394B01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE65859E-B793-4AB8-B814-13A29BBCAFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE65859E-B793-4AB8-B814-13A29BBCAFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE65859E-B793-4AB8-B814-13A29BBCAFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE65859E-B793-4AB8-B814-13A29BBCAFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979650EE-ACEA-4253-B750-8DC559394B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979650EE-ACEA-4253-B750-8DC559394B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979650EE-ACEA-4253-B750-8DC559394B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979650EE-ACEA-4253-B750-8DC559394B01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BB3F7C1-A46C-4181-BED6-230D02AA841B}
+	EndGlobalSection
+EndGlobal
