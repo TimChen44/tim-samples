@@ -1,0 +1,22 @@
+﻿@using System.Runtime.InteropServices
+<div class="card">
+    <div class="card-header">
+        Razor ➡️ Html
+    </div>
+    <div class="card-body">
+        <p>
+            @Message
+        </p>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+
+
+
+@code {
+
+    [Parameter]
+    public string Message { get; set; }
+}

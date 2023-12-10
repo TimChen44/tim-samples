@@ -1,0 +1,72 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">BlazorDemo</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="WeatherStreamTrue">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather 流式传输-开
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="WeatherStreamFalse">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather 流式传输-关
+            </NavLink>
+        </div>
+
+
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="StreamRenderingTrue">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 流式传输-开
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="StreamRenderingFalse">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 流式传输-关
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="StreamRenderingTrueAndFalse">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> True & False
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="StreamRenderingChild">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 子组件
+            </NavLink>
+        </div>
+
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="PrerenderingServer">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 预呈现 Server
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="PrerenderingWebAssembly">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> 预呈现 WebAssembly
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

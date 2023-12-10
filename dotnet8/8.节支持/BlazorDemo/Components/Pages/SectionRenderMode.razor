@@ -1,0 +1,11 @@
+﻿@page "/SectionRenderMode"
+
+<h3>SectionOutlet:SectionName</h3>
+<SectionRenderModeMessage></SectionRenderModeMessage>
+<hr />
+<SectionOutlet SectionName="section-render-mode-static" />
+<SectionOutlet @rendermode="InteractiveServer" SectionName="section-render-mode-interactive" />
+
+@code {
+    internal static object SharedMessageSection = new();
+}

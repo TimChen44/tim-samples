@@ -1,0 +1,13 @@
+﻿@page "/SerializableParameters"
+
+<div class="card">
+    <div class="card-header">
+        静态渲染-可序列化参数传入子组件 (SerializableParameters)
+    </div>
+    <div class="card-body">
+        <SharedMessage @rendermode="RenderMode.InteractiveServer" Title="Welcome!" />
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>

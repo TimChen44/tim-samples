@@ -1,0 +1,74 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">BlazorDemo</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="PrerenderingServerRenderModes">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>预呈现-Server
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="PrerenderingWebAssemblyRenderModes">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>预呈现-WebAssembly
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="server-prerendered-1">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Server 预渲染 开启
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="server-prerendered-2">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Server 预渲染 状态保存
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="server-prerendered-3">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Server 预渲染 关闭
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="wasm-prerendered-1">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Wasn 预渲染 开启
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="wasm-prerendered-2">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Wasn 预渲染 状态保存
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="wasm-prerendered-3">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Wasn 预渲染 关闭
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

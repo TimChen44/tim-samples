@@ -1,0 +1,35 @@
+﻿<div class="card">
+    <div class="card-header">
+        SharedMessage:@Title
+    </div>
+    <div class="card-body">
+        <button class="btn btn-primary" @onclick="UpdateMessage">点击</button>
+        <p>
+            @message
+        </p>
+
+        <p>@ChildContent</p>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+
+
+
+@code {
+    private string message = "没有点击";
+    private int clickCount = 0;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string Title { get; set; } = "你好!";
+
+    private void UpdateMessage()
+    {
+        var ss = typeof(SharedMessage);
+        message = $"已经点击 {++clickCount} 次";
+    }
+}

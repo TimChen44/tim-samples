@@ -1,0 +1,27 @@
+﻿@page "/server-prerendered-3"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@inject ILogger<ServerPrerendered1> Logger
+
+<PageTitle>预渲染计数器 Demo1</PageTitle>
+
+<h1>预渲染计数器</h1>
+
+<p role="status">当前计数: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">点击</button>
+
+@code {
+    private int currentCount;
+    private Random r = new Random();
+
+    protected override void OnInitialized()
+    {
+        currentCount = r.Next(100);
+        Logger.LogInformation("{Time} 当前计数设置 {Count}", DateTime.Now, currentCount);
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

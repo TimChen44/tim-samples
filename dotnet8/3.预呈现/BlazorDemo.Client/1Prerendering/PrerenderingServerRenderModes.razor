@@ -1,0 +1,18 @@
+﻿@page "/PrerenderingServerRenderModes"
+
+<div class="card">
+    <div class="card-header">
+        预呈现 (Server)
+    </div>
+    <div class="card-body">
+        <SharedMessage @rendermode="new InteractiveServerRenderMode(prerender: true)" 
+        Title="你好！Prerender true" />
+        <hr />
+        <SharedMessage @rendermode="new InteractiveServerRenderMode(prerender: false)" 
+        Title="你好！Prerender false" />
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+

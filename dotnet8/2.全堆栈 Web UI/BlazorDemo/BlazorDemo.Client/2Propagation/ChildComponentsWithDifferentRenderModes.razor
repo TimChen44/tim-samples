@@ -1,0 +1,15 @@
+﻿@page "/ChildComponentsWithDifferentRenderModes"
+
+<div class="card">
+    <div class="card-header">
+        具有不同呈现模式的子组件 (ChildComponentsWithDifferentRenderModes)
+    </div>
+    <div class="card-body">
+        <SharedMessage @rendermode="RenderMode.InteractiveServer" Title="你好！Server！" />
+        <hr />
+        <SharedMessage @rendermode="RenderMode.InteractiveWebAssembly" Title="你好！WebAssembly！" />
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>

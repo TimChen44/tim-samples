@@ -1,0 +1,23 @@
+﻿@page "/InitializedError"
+@using System.Runtime.InteropServices
+<div class="card">
+    <div class="card-header">
+        @Title
+    </div>
+    <div class="card-body">
+
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "载入立即产生异常";
+
+    protected override void OnInitialized()
+    {
+        int i = Convert.ToInt32("");
+    }
+}

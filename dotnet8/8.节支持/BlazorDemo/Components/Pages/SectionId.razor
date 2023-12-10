@@ -1,0 +1,14 @@
+﻿@page "/SectionId"
+@rendermode InteractiveServer
+
+<h3>SectionOutlet:SectionId</h3>
+<SectionIdMessage></SectionIdMessage>
+<hr />
+
+
+<SectionOutlet SectionId="SectionIdMessageContent" />
+
+
+@code {
+    internal static object SectionIdMessageContent = new();
+}

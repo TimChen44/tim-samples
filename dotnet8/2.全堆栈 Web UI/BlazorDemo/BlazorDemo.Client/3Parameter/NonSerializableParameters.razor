@@ -1,0 +1,15 @@
+﻿@page "/NonSerializableParameters"
+
+<div class="card">
+    <div class="card-header">
+        静态渲染-不可序列化参数传入子组件 (NonSerializableParameters)
+    </div>
+    <div class="card-body">
+        <SharedMessage @rendermode="RenderMode.InteractiveServer" Title="Welcome!">
+            不可序列化的RenderFragment
+        </SharedMessage>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>

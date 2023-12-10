@@ -1,0 +1,37 @@
+﻿@using System.Runtime.InteropServices
+<div class="card">
+    <div class="card-header">
+        SectionNameMessage
+    </div>
+    <div class="card-body">
+        <button class="btn btn-primary" @onclick="UpdateMessage">SharedMessage中点击</button>
+        <p>
+            @message
+        </p>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+
+<SectionContent SectionName="section-name-message-content">
+    <div class="card">
+        <div class="card-header">
+            来自SectionNameMessage组件
+        </div>
+        <div class="card-body">
+            <button class="btn btn-primary" @onclick="UpdateMessage">SectionContent中点击</button>
+        </div>
+    </div>
+
+</SectionContent>
+
+@code {
+    private string message = "没有点击";
+    private int clickCount = 0;
+    
+    private void UpdateMessage()
+    {
+        message = $"已经点击 {++clickCount} 次";
+    }
+}

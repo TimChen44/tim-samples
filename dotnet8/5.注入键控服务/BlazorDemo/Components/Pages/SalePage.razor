@@ -1,0 +1,22 @@
+﻿@page "/SalePage"
+@rendermode RenderMode.InteractiveServer
+
+<div class="card">
+    <div class="card-header">
+        SalePage
+    </div>
+    <div class="card-body">
+        <p>
+            @message
+        </p>
+        <hr />
+        <button class="btn btn-primary" @onclick="VIPButton">VIP</button>
+        <button class="btn btn-primary" @onclick="CustomerButton">Customer</button>
+
+        <button class="btn btn-primary" @onclick="ShowConnectionString">ConnectionString</button>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+

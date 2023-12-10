@@ -1,0 +1,97 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">BlazorDemo</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="StaticRenderMode">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>静态呈现模式
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ServerRenderMode">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>Server 呈现模式
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="WebassemblyRenderMode">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>WebAssembly 呈现模式
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="AutoRenderMode">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>自动呈现模式
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ServerRenderModeInClient">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>Server 呈现模式 InClient
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="WebassemblyRenderModeOutClient">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>WebAssembly 呈现模式 OutClient
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="RenderModeInheritanceStatic">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>呈现模式继承-静态
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="RenderModeInheritanceServer">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>呈现模式继承-Server
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="RenderModeInheritanceWebassembly">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>呈现模式继承-Webassembly
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ChildComponentsWithDifferentRenderModes">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>具有不同呈现模式的子组件
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SerializableParameters">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>静态渲染-可序列化参数传入子组件
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="NonSerializableParameters">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>静态渲染-不可序列化参数传入子组件
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="WrapperPage">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>静态渲染-包装组件
+            </NavLink>
+        </div>
+
+
+    </nav>
+</div>
+

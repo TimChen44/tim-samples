@@ -1,0 +1,57 @@
+﻿@page "/server-prerendered-2"
+@rendermode RenderMode.InteractiveServer
+@implements IDisposable
+@inject ILogger<ServerPrerendered2> Logger
+@inject PersistentComponentState ApplicationState //组件应用程序的组件和服务的状态。
+
+<PageTitle>预渲染计数器 Demo2</PageTitle>
+
+<h1>预渲染计数器 Demo2</h1>
+
+<p role="status">当前计数: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">点击</button>
+
+@code {
+    private int currentCount;
+    private Random r = new Random();
+    private PersistingComponentStateSubscription persistingSubscription;
+
+    protected override void OnInitialized()
+    {
+        // 注册回调，以在应用程序即将暂停时保留组件状态。 
+        // 已注册的回调可以利用此机会保留其状态，以便在应用程序恢复时检索它。
+        persistingSubscription = ApplicationState.RegisterOnPersisting(PersistCount);
+
+        // 尝试使用给定 key 的 以 JSON 的形式检索持久状态，并将其反序列化为 类型的 TValue实例。 
+        // 当密钥存在时，状态通过 成功返回 instance ，并从中删除 PersistentComponentState。
+        if (!ApplicationState.TryTakeFromJson<int>("count", out var restoredCount))
+        {
+            currentCount = r.Next(100);
+            Logger.LogInformation("{Time} 当前计数设置 {Count}", DateTime.Now, currentCount);
+        }
+        else
+        {
+            currentCount = restoredCount!;
+            Logger.LogInformation("{Time} 当前计数恢复 {Count}", DateTime.Now, currentCount);
+        }
+    }
+
+    private Task PersistCount()
+    {
+        //序列化 instance 为 JSON，并将其保存在给定 key的 下。
+        ApplicationState.PersistAsJson("count", currentCount);
+
+        return Task.CompletedTask;
+    }
+
+    void IDisposable.Dispose()
+    {
+        persistingSubscription.Dispose();
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

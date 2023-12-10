@@ -1,0 +1,38 @@
+﻿@attribute [StreamRendering(true)]
+
+<div class="card">
+    <div class="card-header">
+        StreamRendering(true) : @Title
+    </div>
+    <div class="card-body">
+        <p>
+            @message
+        </p>
+
+        <p>@ChildContent</p>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+
+
+
+@code {
+    private string message = "没有点击";
+    private int clickCount = 0;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string Title { get; set; } = "StreamRendering(true)";
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = $"{DateTime.Now.ToString()}\t载入中...";
+        await Task.Delay(2000);
+        message = $"{DateTime.Now.ToString()}\t载入完成";
+    }
+}

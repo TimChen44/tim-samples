@@ -1,0 +1,25 @@
+﻿@page "/ClickError"
+@using System.Runtime.InteropServices
+@rendermode RenderMode.InteractiveServer
+<div class="card">
+    <div class="card-header">
+        @Title
+    </div>
+    <div class="card-body">
+        <button class="btn btn-primary" @onclick="BtnClick">点击产生异常</button>
+    </div>
+    <div class="card-footer">
+        OSDescription:@RuntimeInformation.OSDescription
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "点击按钮发生异常";
+
+    private void BtnClick()
+    {
+        int i = Convert.ToInt32("");
+    }
+
+}

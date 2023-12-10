@@ -1,0 +1,57 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">BlazorDemo</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SectionBrother">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> SectionBrother
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Breadcrumb">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Breadcrumb
+            </NavLink>
+        </div>
+
+
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SectionName">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> SectionName
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SectionId">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> SectionId
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <hr style="background: white;margin: 0;" />
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SectionRenderMode">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> SectionRenderMode
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
